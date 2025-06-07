@@ -327,7 +327,7 @@ res.json({ movies });
             let id = req.params.id;
 
             // TODO:  delete the movie by its id
-            let results = null;
+            const results = await db.collection('movies').deleteOne({ _id: new ObjectId(id) });
 
             if (results.deletedCount == 0) {
                 return res.status(404).json({
