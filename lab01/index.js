@@ -24,7 +24,9 @@ function generateAccessToken(id, email) {
     }
 
     // TODO: create the JWT
-    let token = null;
+     let token = jwt.sign(payload, process.env.TOKEN_SECRET, {
+        expiresIn: '1h' // you can adjust the expiry as needed (e.g. '7d', '1h', etc.)
+    });
 
     return token;
 }
