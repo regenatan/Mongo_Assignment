@@ -284,10 +284,25 @@ res.json({ movies });
             }).toArray();
 
             // TODO: create a new movie document based on the provided data
-            let updatedMovieDocument = null;
+            let updatedMovieDocument = {
+            title: title,
+            genre: genreDoc,
+            duration: duration,
+            releaseYear: releaseYear,
+            rating: rating,
+            cast: cast,
+            reviews: reviews.map(review => ({
+                ...review,
+                date: new Date(review.date)
+            })),
+            categories: categoryDocuments
+        };
 
             // TODO: update the movie document
-            let result =null;
+            let result = await db.collection("movies").updateOne(
+            { _id: new ObjectId(id) },
+            { $set: updatedMovieDocument }
+        );
 
             // if there is no matches, means no update took place
             if (result.matchedCount == 0) {
