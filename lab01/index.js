@@ -359,14 +359,22 @@ res.json({ movies });
                 })
             }
 
+            const existingUser = await db.collection('users').findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ error: 'Email already in use' });
+        }
+
+        // Hash the password
+        const hashedPassword = await bcrypt.hash(password, 12);
+
             // TODO: create the new user document
             let userDocument = {
-               
+               email: email,
+            password: hashedPassword
             };
 
             // TODO: Insert the new user document into the collection
-            let result = null;
-
+            let result = await db.collection('users').insertOne(userDocument);
             res.json({
                 "message": "New user account has been created",
                 result
@@ -384,6 +392,7 @@ res.json({ movies });
         try {
 
             let { email, password } = req.body;
+           
             if (!email || !password) {
                 return res.status(400).json({
                     'message': 'Please provide email and password'
