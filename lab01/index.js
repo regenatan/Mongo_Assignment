@@ -116,15 +116,15 @@ res.json({ movies });
             // get the id of the movie that we want to get full details off
             let id = req.params.id;
 
-
             // TODO: Write the code to find movie by its id
-            let movie = null
-
-            if (!movie) {
-                return res.status(404).json({
-                    "error": "Sorry, movie not found"
-                })
-            }
+            const movie = await db.collection("movies").findOne(
+            { _id: new ObjectId(id) },
+            { projection: { _id: 0 } }
+        );
+        
+        if (!movie) {
+            return res.status(404).json({ error: "Movie not found" });
+        }
 
             // send back a response
             res.json({
