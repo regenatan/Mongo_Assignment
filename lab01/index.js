@@ -88,7 +88,6 @@ async function main() {
    });
 })  
 
-
     app.get("/movies", async function (req, res) {
         try {
             // TODO: finish the code below to get all movies
@@ -193,7 +192,6 @@ res.json({ movies });
         }
     });
 
-
     // we use app.post for HTTP METHOD POST - usually to add new data
     app.post("/movies", async function (req, res) {
         try {
@@ -227,11 +225,21 @@ res.json({ movies });
 
             // TODO: create a new movie document
             let newMovieDocument = {
-               
-            }
+    title: title,
+    genre: genreDoc, // embed the full genre document
+    duration: duration,
+    releaseYear: releaseYear,
+    rating: rating,
+    cast: cast,
+    reviews: reviews.map(review => ({
+        ...review,
+        date: new Date(review.date) // convert string to Date object
+    })),
+    categories: categoryDocuments // embed the full category documents
+};
 
-            //TODO: insert the new movie document into the collection
-            let result = null;
+            //insert the new movie document into the collection
+            let result = await db.collection("movies").insertOne(newMovieDocument);
 
             res.status(201).json({
                 'message': 'New movie has been created',
