@@ -382,6 +382,7 @@ res.json({ movies });
     // the client is supposed to provide the email and password in req.body
     app.post('/login', async function (req, res) {
         try {
+
             let { email, password } = req.body;
             if (!email || !password) {
                 return res.status(400).json({
@@ -390,7 +391,7 @@ res.json({ movies });
             }
 
             // TODO: find the user by their email
-            let user = null;
+            let user = await db.collection('users').findOne({ email: email });
 
             // if the user exists
             if (user) {
@@ -398,7 +399,7 @@ res.json({ movies });
                 if (bcrypt.compareSync(password, user.password)) {
                     
                     // TODO: create the accessToken
-                    const accessToken = null;
+                    const accessToken = generateAccessToken(user._id, user.email);
 
                     res.json({
                         "accessToken": accessToken
