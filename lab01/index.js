@@ -107,10 +107,66 @@ res.json({ movies });
             res.status(500);
         }
     })
+  
+    app.get('/movies/search', async function (req, res) {
+        try {
+
+            // extract the search params
+            let { title, genre, releaseYear, rating, cast, categories } = req.query;
+
+            // create a filter object
+            let query = {};
+
+            
+            if (title) {
+                query.title = { $regex: title, $options: 'i' };
+            }
+
+            if (genre) {
+                query['genre.name'] = new RegExp(genre, 'i');
+            }
+
+            if (releaseYear) {
+                query.releaseYear = parseInt(releaseYear);
+            }
+
+            if (rating) {
+                query.rating = { $gte: parseFloat(rating) };
+            }
+
+            if (cast) {
+                query['cast.name'] = { $in: cast.split(',') };
+            }
+
+            if (categories) {
+               query['categories.name'] = { $in: categories.split(',') };
+            }
+
+            // TODO: perform the search
+             const results = await db.collection("movies").find(query).project({
+            title: 1,
+            genre: 1,
+            duration: 1,
+            releaseYear: 1,
+            rating: 1,
+            director: 1,
+            'cast.name': 1,
+            'categories.name': 1
+        }).toArray();
+
+            // send back the results
+            res.json({
+                'results': results
+            })
 
 
+        } catch (e) {
+            console.error(e);
+            res.status(500);
+        }
+    });
 
-    app.get("/movies/:id", async function (req, res) {
+      app.get("/movies/:id", async function (req, res) {
         try {
 
             // get the id of the movie that we want to get full details off
@@ -137,54 +193,6 @@ res.json({ movies });
         }
     });
 
-    app.get('/movies/search', async function (req, res) {
-        try {
-
-            // extract the search params
-            let { title, genre, releaseYear, rating, cast, categories } = req.query;
-
-            // create a filter object
-            let filter = {};
-
-            
-            if (title) {
-                // TODO: if the client provided a title, add it to the filter
-            }
-
-            if (genre) {
-                // TODO: if the client provided a genre, add it to the filter
-            }
-
-            if (releaseYear) {
-                // TODO: if the client provided a releaseYear, add it to the filter
-            }
-
-            if (rating) {
-                // TODO: if the client provided a rating, add it to the filter
-            }
-
-            if (cast) {
-                // TODO: if the client provided a cast, add it to the filter
-            }
-
-            if (categories) {
-                // TODO: if the client provided categories, add it to the filter
-            }
-
-            // TODO: perform the search
-            const results = null;
-
-            // send back the results
-            res.json({
-                'results': results
-            })
-
-
-        } catch (e) {
-            console.error(e);
-            res.status(500);
-        }
-    });
 
     // we use app.post for HTTP METHOD POST - usually to add new data
     app.post("/movies", async function (req, res) {
