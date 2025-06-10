@@ -20,7 +20,7 @@ function generateAccessToken(id, email) {
     // set the payload of the JWT (i.e, developers can add any data they want)
     let payload = {
         'user_id': id,
-        'email': email,
+        'email': email
     }
 
     // TODO: create the JWT
@@ -68,7 +68,7 @@ app.use(cors()); // enable cross origin resources sharing
 
 // 1b. enable JSON processing (i.e allow clients to send JSON data to our server)
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+//app.use(express.urlencoded({ extended: false }));
 
 // uri = connection string
 async function connect(uri, dbname) {
@@ -353,7 +353,7 @@ res.json({ movies });
     app.post('/users', async function (req, res) {
         try {
             console.log(req.body)
-            let { email, password } = req.body;
+            let { email, password, role } = req.body;
             if (!email || !password) {
                 return res.status(400).json({
                     "error": "Please provide user name and password"
@@ -371,7 +371,8 @@ res.json({ movies });
             // TODO: create the new user document
             let userDocument = {
                email: email,
-            password: hashedPassword
+            password: hashedPassword,
+            role: role
             };
 
             // TODO: Insert the new user document into the collection
@@ -427,7 +428,7 @@ res.json({ movies });
         }
     })
 
-    app.get('/profile', verifyToken, async function (req, res) {
+    app.get('/user', verifyToken, async function (req, res) {
 
         // get the payload
         let user = req.user;
@@ -437,6 +438,25 @@ res.json({ movies });
         })
 
     })
+
+ app.get('/users', verifyToken, async function (req, res) {
+    try {
+        if (req.user.role !== 'admin') {
+            return res.status(403).json({ message: 'Forbidden: Admins only' });
+        }
+          const users = await db.collection("users").find().project({
+    email: 1,
+    role: 1,
+}).toArray();
+
+res.json({ users});
+        //let users = await User.find().select('-password');
+        // res.json({ users });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
 
 }
 main();
