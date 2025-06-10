@@ -1,0 +1,52 @@
+[
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c85"},
+    "name": "Action",
+    "description": "Movies with high-energy physical stunts, chases, and combat sequences"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c86"},
+    "name": "Comedy",
+    "description": "Light-hearted movies designed to amuse and provoke laughter"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c87"},
+    "name": "Drama",
+    "description": "Character-driven plots with realistic themes and emotional content"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c88"},
+    "name": "Science Fiction",
+    "description": "Speculative fiction dealing with futuristic concepts and technology"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c89"},
+    "name": "Horror",
+    "description": "Films that seek to elicit fear or disgust in the audience"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c8a"},
+    "name": "Romance",
+    "description": "Focus on romantic relationships and emotional desires"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c8b"},
+    "name": "Thriller",
+    "description": "Suspenseful, exciting plots that keep viewers on the edge of their seats"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c8c"},
+    "name": "Animation",
+    "description": "Films created through the manipulation of images or illustrations"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c8d"},
+    "name": "Documentary",
+    "description": "Non-fictional films intended to document reality for education or record"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c8e"},
+    "name": "Fantasy",
+    "description": "Films with magical or supernatural elements not explained by science"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c90"},
+    "name": "Family-Friendly",
+    "description": "Suitable for viewers of all ages"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c91"},
+    "name": "Award-Winning",
+    "description": "Has won significant industry awards"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c92"},
+    "name": "Indie",
+    "description": "Produced outside major film studio systems"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c93"},
+    "name": "Classic",
+    "description": "Significant films that have stood the test of time"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c94"},
+    "name": "Blockbuster",
+    "description": "High-budget, commercially successful films"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c95"},
+    "name": "Cult-Classic",
+    "description": "Films with dedicated and passionate fanbases"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c96"},
+    "name": "Franchise",
+    "description": "Part of a series of related films"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c97"},
+    "name": "Based-On-Book",
+    "description": "Adapted from literary works"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c98"},
+    "name": "Foreign",
+    "description": "Films produced outside the viewer's native country"
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610c99"},
+    "name": "Coming-of-Age",
+    "description": "Focuses on the growth of a protagonist from youth to adulthood"
+  }
+]

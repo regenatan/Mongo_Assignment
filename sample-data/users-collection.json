@@ -1,0 +1,37 @@
+[
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610ca0"},
+    "email": "admin@moviedb.com",
+    "password": "$2b$12$1oE8Fz5UBoZW6FThrQH2U.tV8HvF7IIN6kUn1mWZjW0G3rTiivtMu", 
+    "role": "admin",
+    "created_at": {"$date": "2025-03-01T00:00:00Z"}
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610ca1"},
+    "email": "user1@example.com",
+    "password": "$2b$12$NH6.uYObqzp5oqYMw/nU.eZM8CiWBfAPs5N75Yd0kDkTLxRUcJK7W", 
+    "role": "user",
+    "created_at": {"$date": "2025-03-01T00:00:00Z"}
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610ca2"},
+    "email": "user2@example.com",
+    "password": "$2b$12$1E/4Yvo1/RO.hQHQLweFQuy5m5GWh/S3Kl3uJVjnv1UxjTfXw7ue.", 
+    "role": "user",
+    "created_at": {"$date": "2025-03-01T00:00:00Z"}
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610ca3"},
+    "email": "editor@moviedb.com",
+    "password": "$2b$12$P7MjLPeWXbTG8xM/U8kpx.Kj5z9sMhFd4vQoZkvKLqKqZB52VO/B2", 
+    "role": "editor",
+    "created_at": {"$date": "2025-03-01T00:00:00Z"}
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610ca4"},
+    "email": "reviewer@moviedb.com",
+    "password": "$2b$12$mWi4nUQOzpH9KO5CibE90.jqHp3e5gK2CfVJwuinRl9bNAsXCnG6.",
+    "role": "reviewer",
+    "created_at": {"$date": "2025-03-01T00:00:00Z"}
+  }
+]

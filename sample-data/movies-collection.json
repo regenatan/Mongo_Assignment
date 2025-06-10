@@ -1,0 +1,277 @@
+[
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610cb0"},
+    "title": "The Space Odyssey",
+    "genre": {
+      "_id": {"$oid": "60d21b4667d0d8992e610c88"},
+      "name": "Science Fiction",
+      "description": "Speculative fiction dealing with futuristic concepts and technology"
+    },
+    "duration": 142,
+    "releaseYear": 2023,
+    "rating": 4.8,
+    "cast": [
+      {
+        "name": "John Richards",
+        "role": "Commander Adams",
+        "profile": "Lead actor with multiple sci-fi credits"
+      },
+      {
+        "name": "Sarah Chen",
+        "role": "Dr. Elizabeth Cruz",
+        "profile": "Award-winning actress known for dramatic roles"
+      },
+      {
+        "name": "Michael Washington",
+        "role": "AI System ARIA",
+        "profile": "Voice actor specializing in AI characters"
+      }
+    ],
+    "reviews": [
+      {
+        "author": "CriticWeekly",
+        "content": "A breathtaking journey through space with stunning visuals and compelling storytelling.",
+        "rating": 5,
+        "date": {"$date": "2023-06-15T00:00:00Z"}
+      },
+      {
+        "author": "SciFiEnthusiast",
+        "content": "While visually impressive, the plot becomes convoluted in the third act.",
+        "rating": 4,
+        "date": {"$date": "2023-06-20T00:00:00Z"}
+      }
+    ],
+    "categories": [
+      {
+        "_id": {"$oid": "60d21b4667d0d8992e610c94"},
+        "name": "Blockbuster",
+        "description": "High-budget, commercially successful films"
+      },
+      {
+        "_id": {"$oid": "60d21b4667d0d8992e610c96"},
+        "name": "Franchise",
+        "description": "Part of a series of related films"
+      }
+    ],
+    "director": "Alexandra Nolan",
+    "synopsis": "In the year 2150, a team of astronauts embarks on a mission to explore a mysterious anomaly at the edge of our solar system, only to discover a truth that challenges humanity's understanding of existence."
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610cb1"},
+    "title": "The Last Laugh",
+    "genre": {
+      "_id": {"$oid": "60d21b4667d0d8992e610c86"},
+      "name": "Comedy",
+      "description": "Light-hearted movies designed to amuse and provoke laughter"
+    },
+    "duration": 98,
+    "releaseYear": 2024,
+    "rating": 4.2,
+    "cast": [
+      {
+        "name": "David Murphy",
+        "role": "Jack Williams",
+        "profile": "Comedian known for improvisation"
+      },
+      {
+        "name": "Aisha Johnson",
+        "role": "Maya Rodriguez",
+        "profile": "Rising star in comedy films"
+      },
+      {
+        "name": "Robert Lee",
+        "role": "Uncle Bernie",
+        "profile": "Veteran character actor"
+      }
+    ],
+    "reviews": [
+      {
+        "author": "LaughTrack",
+        "content": "Consistently funny with heart at its core. One of the year's best comedies.",
+        "rating": 4.5,
+        "date": {"$date": "2024-01-30T00:00:00Z"}
+      },
+      {
+        "author": "MovieMaven",
+        "content": "While it has several laugh-out-loud moments, the story is somewhat predictable.",
+        "rating": 4,
+        "date": {"$date": "2024-02-05T00:00:00Z"}
+      }
+    ],
+    "categories": [
+      {
+        "_id": {"$oid": "60d21b4667d0d8992e610c90"},
+        "name": "Family-Friendly",
+        "description": "Suitable for viewers of all ages"
+      }
+    ],
+    "director": "James Thompson",
+    "synopsis": "A washed-up comedian returns to his hometown to care for his ailing father, discovering that sometimes the best punchlines come from the heart."
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610cb2"},
+    "title": "Shadows of the Past",
+    "genre": {
+      "_id": {"$oid": "60d21b4667d0d8992e610c87"},
+      "name": "Drama",
+      "description": "Character-driven plots with realistic themes and emotional content"
+    },
+    "duration": 127,
+    "releaseYear": 2023,
+    "rating": 4.9,
+    "cast": [
+      {
+        "name": "Emma Simmons",
+        "role": "Clara Harrington",
+        "profile": "Academy Award winner for Best Actress"
+      },
+      {
+        "name": "Thomas Wright",
+        "role": "Richard Harrington",
+        "profile": "Theater actor transitioning to film"
+      },
+      {
+        "name": "Olivia Kim",
+        "role": "Young Clara",
+        "profile": "Child actor with exceptional range"
+      }
+    ],
+    "reviews": [
+      {
+        "author": "DramaReviews",
+        "content": "A masterclass in storytelling and acting. Simmons delivers one of her finest performances.",
+        "rating": 5,
+        "date": {"$date": "2023-09-10T00:00:00Z"}
+      },
+      {
+        "author": "CinemaInsight",
+        "content": "The film's slow pace may alienate some viewers, but patient audiences will be rewarded.",
+        "rating": 4.5,
+        "date": {"$date": "2023-09-15T00:00:00Z"}
+      }
+    ],
+    "categories": [
+      {
+        "_id": {"$oid": "60d21b4667d0d8992e610c91"},
+        "name": "Award-Winning",
+        "description": "Has won significant industry awards"
+      },
+      {
+        "_id": {"$oid": "60d21b4667d0d8992e610c97"},
+        "name": "Based-On-Book",
+        "description": "Adapted from literary works"
+      }
+    ],
+    "director": "Marcus Chen",
+    "synopsis": "A celebrated author returns to her childhood home after decades away, confronting the family secrets that inspired her famous novel and the sister she left behind."
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610cb3"},
+    "title": "Final Impact",
+    "genre": {
+      "_id": {"$oid": "60d21b4667d0d8992e610c85"},
+      "name": "Action",
+      "description": "Movies with high-energy physical stunts, chases, and combat sequences"
+    },
+    "duration": 114,
+    "releaseYear": 2024,
+    "rating": 4.3,
+    "cast": [
+      {
+        "name": "Jason Carter",
+        "role": "Agent Derek Stone",
+        "profile": "Former stuntman turned action star"
+      },
+      {
+        "name": "Natasha Patel",
+        "role": "Director Miranda Shaw",
+        "profile": "Known for complex villain roles"
+      },
+      {
+        "name": "Carlos Mendez",
+        "role": "Hacker Genius",
+        "profile": "Breakout role for this newcomer"
+      }
+    ],
+    "reviews": [
+      {
+        "author": "ActionZone",
+        "content": "Non-stop thrills with practical effects that put CGI-heavy films to shame.",
+        "rating": 4.5,
+        "date": {"$date": "2024-02-20T00:00:00Z"}
+      },
+      {
+        "author": "ThrillerFan",
+        "content": "While the action sequences impress, the plot feels recycled from better films.",
+        "rating": 3.5,
+        "date": {"$date": "2024-02-28T00:00:00Z"}
+      }
+    ],
+    "categories": [
+      {
+        "_id": {"$oid": "60d21b4667d0d8992e610c94"},
+        "name": "Blockbuster",
+        "description": "High-budget, commercially successful films"
+      }
+    ],
+    "director": "Steven Park",
+    "synopsis": "When terrorists hack into government missile systems, a disgraced agent is brought back from retirement for one final mission that will either restore his reputation or cost him everything."
+  },
+  {
+    "_id": {"$oid": "60d21b4667d0d8992e610cb4"},
+    "title": "Whispers in the Attic",
+    "genre": {
+      "_id": {"$oid": "60d21b4667d0d8992e610c89"},
+      "name": "Horror",
+      "description": "Films that seek to elicit fear or disgust in the audience"
+    },
+    "duration": 103,
+    "releaseYear": 2023,
+    "rating": 4.6,
+    "cast": [
+      {
+        "name": "Rebecca Martinez",
+        "role": "Sarah Collins",
+        "profile": "Rising scream queen"
+      },
+      {
+        "name": "Kevin Wilson",
+        "role": "Mark Collins",
+        "profile": "Character actor transitioning to horror"
+      },
+      {
+        "name": "Lily Zhang",
+        "role": "Dani Collins",
+        "profile": "Child actor with haunting presence"
+      }
+    ],
+    "reviews": [
+      {
+        "author": "HorrorCritic",
+        "content": "Genuinely terrifying with an atmosphere that lingers long after viewing.",
+        "rating": 5,
+        "date": {"$date": "2023-10-31T00:00:00Z"}
+      },
+      {
+        "author": "ScareReviews",
+        "content": "Effective tension-building, though relies too heavily on jump scares in the final act.",
+        "rating": 4,
+        "date": {"$date": "2023-11-05T00:00:00Z"}
+      }
+    ],
+    "categories": [
+      {
+        "_id": {"$oid": "60d21b4667d0d8992e610c92"},
+        "name": "Indie",
+        "description": "Produced outside major film studio systems"
+      },
+      {
+        "_id": {"$oid": "60d21b4667d0d8992e610c95"},
+        "name": "Cult-Classic",
+        "description": "Films with dedicated and passionate fanbases"
+      }
+    ],
+    "director": "Emily Nakamura",
+    "synopsis": "A family moves into a rural Victorian home hoping for a fresh start, only to discover that the strange noises in the attic are more than just settling foundations."
+  }
+]
